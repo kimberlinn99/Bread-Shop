@@ -17,18 +17,6 @@ app.use('/public', express.static('./public'))
 
 connectDB()
 
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = process.env.DB_URL;
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-// client.connect(err => {
-//     // if(err) throw err
-//     console.log("Database connected")
-// //   const collection = client.db("test").collection("devices");
-// //   // perform actions on the collection object
-// //   console.log(`This is collection: ${collection.collectionName}`)
-//   client.close();
-// });
-
 app.use('/menu', menuRouter)
 app.use('/subscribe', subscribeRouter)
 app.use('/contact', feedbackRouter)
